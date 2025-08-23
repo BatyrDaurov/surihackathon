@@ -7,7 +7,7 @@ import s from "./MediaLiteracy.module.scss";
 type MediaLiteracyProps = {
   title: string;
   icon: string;
-  description: string;
+  description: React.ReactNode;
   bannerGradient: string;
   textColor: string;
   counter: number;
@@ -47,7 +47,7 @@ export const MediaLiteracy = memo(
         <h4 className={s.card_title}>{title}</h4>
       </div>
       <div className={s.card_info}>
-        <p>{description}</p>
+        <ul className={s.card_list}>{description}</ul>
       </div>
     </motion.div>
   )

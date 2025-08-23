@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media(575) {
+    padding: 50px 30px;
+  }
   &__info {
     max-width: 720px;
   }
@@ -24,6 +28,9 @@
       font-size: 1.5rem;
       line-height: 120%;
     }
+    @include media(575) {
+      font-size: 1.2rem;
+    }
   }
   &__description {
     font-weight: 400;
@@ -36,6 +43,10 @@
     @include media(1023) {
       font-size: 0.9rem;
       line-height: 140%;
+    }
+    @include media(575) {
+      line-height: 130%;
+      font-size: 0.8rem;
     }
   }
 }
