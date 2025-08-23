@@ -1,5 +1,7 @@
+@import "./../../../common/mixins.scss";
+
 .footer {
-  padding-top: 200px;
+  padding: 50px;
   margin-top: auto; /* Отодвигает футер вниз */
   height: 200px;
   font-size: 2rem;
@@ -7,4 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media(1023) {
+    font-size: 1rem;
+  }
 }

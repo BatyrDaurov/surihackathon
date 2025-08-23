@@ -128,7 +128,9 @@ export default function Home({}) {
         </SuriContainer>
       </section>
       <section id="solutions">
-        <SuriContainer className={`${s.section_indent}`}>
+        <SuriContainer
+          className={`${s.section_indent} ${s.solutions__container}`}
+        >
           <SectionTitle align="center" text="Solutions" />
           <div className={s.solutions}>
             <Swiper

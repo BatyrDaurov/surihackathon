@@ -171,15 +171,29 @@
 .swiper_solution {
   height: 100%;
   --swiper-theme-color: #929292;
-  --swiper-navigation-size: 40px;
+  --swiper-navigation-size: 45px;
+  @include media(575) {
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-top-offset: 90%;
+  }
 }
 .solutions {
   height: 500px;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #a3a3a3;
   backdrop-filter: blur(6.8px);
   border-radius: 31px;
-  @include media(1139) {
-    height: 450px;
+  @include media(1023) {
+    height: 400px;
+  }
+  @include media(575) {
+    height: auto;
+    border-radius: 0;
+  }
+  &__container {
+    @include media(575) {
+      padding-inline: 0;
+    }
   }
 }

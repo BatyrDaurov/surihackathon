@@ -25,8 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistFont.variable} ${gloockFont.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistFont.variable} ${gloockFont.variable} page_container`}
+        style={{ position: "static" }}
+      >
         <Header />
         <main> {children}</main>
         <Footer />
