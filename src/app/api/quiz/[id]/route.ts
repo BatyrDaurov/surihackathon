@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
-import { QuizModules, QuizType } from "@/lib/types";
+import { QuizType } from "@/lib/types";
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const param = await params; // {locale: "id"}
   const id = await parseInt(param.id); // id

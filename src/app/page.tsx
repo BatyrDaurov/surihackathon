@@ -76,14 +76,14 @@ export default function Home({}) {
             }}
             className={s.hero__text}
           >
-            Hi! I'm Suri. With the rapid development of information technology
-            and its impact on society, I've decided to start my own blog on
-            media literacy. While some see technological progress as an
-            investment in the future and a way to simplify everyday tasks,
+            Hi! I&apos;m Suri. With the rapid development of information
+            technology and its impact on society, I&apos;ve decided to start my
+            own blog on media literacy. While some see technological progress as
+            an investment in the future and a way to simplify everyday tasks,
             others use it for personal gain, disregarding moral principles. Join
-            me in exploring media literacy—it's not only useful but essential
-            for your safety. Together, we'll make the learning process engaging
-            and unforgettable!
+            me in exploring media literacy—it&apos;s not only useful but
+            essential for your safety. Together, we&apos;ll make the learning
+            process engaging and unforgettable!
           </motion.div>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function Home({}) {
             >
               <div className={s.mask}>
                 {mediaLiteracy.map((topic, key) => (
-                  <SwiperSlide className={s.animation_card}>
+                  <SwiperSlide key={topic.title} className={s.animation_card}>
                     <MediaLiteracy
                       counter={isMobile ? 0 : key}
                       title={topic.title}
@@ -140,7 +140,7 @@ export default function Home({}) {
               spaceBetween={30}
             >
               {solutions.map((solution) => (
-                <SwiperSlide>
+                <SwiperSlide key={solution.title}>
                   <SolutionCard
                     title={solution.title}
                     description={solution.description}

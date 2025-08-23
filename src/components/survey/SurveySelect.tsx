@@ -7,7 +7,7 @@ type Props = {
   step: string;
   question: string;
   buttonHandle: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  answers: any[];
+  answers: string[];
 };
 
 export const SurveySelect = (props: Props) => {

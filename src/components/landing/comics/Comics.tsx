@@ -1,9 +1,7 @@
 import React from "react";
 import s from "./Comics.module.scss";
 
-type Props = {};
-
-export const Comics = (props: Props) => {
+export const Comics = () => {
   return (
     <div className={s.comics}>
       <iframe

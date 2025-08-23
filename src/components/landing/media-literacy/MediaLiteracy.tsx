@@ -33,8 +33,12 @@ export const MediaLiteracy = memo(
         delay: 0.25 * counter,
         type: "spring",
       }}
-      //@ts-ignore
-      style={{ "--gradient-color": bannerGradient, "--text-color": textColor }}
+      style={
+        {
+          "--gradient-color": bannerGradient,
+          "--text-color": textColor,
+        } as React.CSSProperties
+      }
     >
       <div className={s.card_banner}>
         <div className={s.card_icon}>

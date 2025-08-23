@@ -76,7 +76,7 @@ export default function DebunkFake() {
                     )[questionNumber]
                   );
 
-                  setLastAnswerInfo((prev) => ({
+                  setLastAnswerInfo((_) => ({
                     isCheckTime: true,
                     prevMessage:
                       (correctAnswer === choosenAnswer

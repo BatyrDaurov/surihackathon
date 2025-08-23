@@ -14,11 +14,11 @@ type Props = {
     | "match-parent";
 };
 
-export const SectionTitle = (props: Props) => {
+export const SectionTitle = memo((props: Props) => {
   const { text, className, align = "left" } = props;
   return (
     <h2 className={`${s.title} ${className}`} style={{ textAlign: align }}>
       {text}
     </h2>
   );
-};
+});

@@ -9,7 +9,7 @@ type Props = {
   description: string;
   banner?: string;
   buttonText?: string;
-  buttonHandle?: any;
+  buttonHandle?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export const SurveyWelcome = (props: Props) => {
