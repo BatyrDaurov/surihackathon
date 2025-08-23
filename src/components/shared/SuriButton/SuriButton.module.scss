@@ -1,0 +1,44 @@
+.button {
+  color: #fff;
+  padding: 11px;
+  background: var(--accent-background-color);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: 0.2s;
+  &:hover {
+    border-color: var(--title-text-color);
+  }
+}
+
+.survey {
+  padding: 20px;
+  background-color: var(--background-primary-color);
+  border: 1px solid var(--primary-border-color);
+  border-radius: 12px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: var(--primary-text-color);
+
+  transition: 0.2s;
+
+  &:hover {
+    color: #ae7f50;
+    background-color: var(--hover-background-primary-color);
+    border-color: var(--hover-primary-border-color);
+  }
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--accent-text-color);
+}

@@ -1,0 +1,185 @@
+@import "./../common/mixins.scss";
+
+.section_indent {
+  padding-top: 160px;
+  margin-top: 135px !important;
+  @include media(1023) {
+    padding-top: 80px;
+    margin-top: 80px !important;
+  }
+  &:not(.separateless)::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #cacaca;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  margin-top: calc((var(--header-size) * -1) - 25px);
+  background: linear-gradient(270deg, #fff5ce 0%, #fffbee 54.56%);
+  @include media(1679) {
+    height: 900px;
+  }
+  @include media(1023) {
+    height: 600px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("/bghero.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include media(1023) {
+      background-size: cover;
+    }
+  }
+  &__container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    @include media(1023) {
+      flex-direction: column;
+      overflow: hidden;
+      width: 95%;
+    }
+  }
+  &__images {
+    // position: relative;
+    display: flex;
+    @include media(1023) {
+      height: 100px;
+      z-index: -1;
+    }
+  }
+  &__tree {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 1000px;
+    height: 850px;
+    @include media(1679) {
+      height: 800px;
+      left: -40%;
+    }
+    @include media(1023) {
+      width: 800px;
+      height: 500px;
+      display: none;
+    }
+  }
+  &__suri {
+    width: 332px;
+    height: 722px;
+    img {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @include media(1679) {
+      height: 650px;
+    }
+    @include media(1023) {
+      height: 470px;
+      width: 220px;
+      z-index: -1;
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: -1;
+    margin-left: -40px;
+    margin-top: 100px;
+
+    width: 740px;
+
+    background: #7b5339;
+    border: 4px solid #422a29;
+    border-radius: 15px;
+    padding: 15px 32px;
+
+    font-weight: 400;
+    font-size: 1.65rem;
+    line-height: 181%;
+
+    color: #e5c1aa;
+    @include media(1679) {
+      width: 600px;
+      font-size: 1.25rem;
+      line-height: 161%;
+    }
+    @include media(1023) {
+      margin-left: 0;
+      font-size: 1rem;
+      width: 100%;
+      padding: 10px;
+      line-height: 125%;
+    }
+  }
+}
+.animation_card {
+  width: 255px;
+}
+.mask {
+  position: absolute; /* Позиционируем маску */
+  top: 0;
+  right: 0; /* Помещаем маску справа */
+  width: 50px; /* Ширина маски (где градиент будет исчезать) */
+  height: 100%; /* Высота маски */
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* Градиент от прозрачного к непрозрачному */
+  pointer-events: none; /* Маска не будет мешать взаимодействию с элементом */
+}
+
+.media {
+  &_swiper {
+    position: relative;
+    @include media(1023) {
+      height: 500px;
+    }
+    --swiper-navigation-sides-offset: 10%;
+    --swiper-navigation-top-offset: 400px;
+    --swiper-navigation-color: var(--accent-background-color);
+    --swiper-navigation-size: 50px;
+    @include media(575) {
+      --swiper-navigation-sides-offset: 100px;
+    }
+  }
+}
+
+.swiper_solution {
+  height: 100%;
+  --swiper-theme-color: #929292;
+  --swiper-navigation-size: 40px;
+}
+.solutions {
+  height: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #a3a3a3;
+  backdrop-filter: blur(6.8px);
+  border-radius: 31px;
+  @include media(1139) {
+    height: 450px;
+  }
+}

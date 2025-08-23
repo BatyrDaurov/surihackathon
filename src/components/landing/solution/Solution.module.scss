@@ -1,0 +1,41 @@
+@import "./../../../common/mixins.scss";
+
+.solution_card {
+  padding: 30px 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__info {
+    max-width: 720px;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 186%;
+
+    color: var(--title-text-color);
+    @include media(1139) {
+      font-size: 2rem;
+    }
+    @include media(1023) {
+      font-size: 1.5rem;
+      line-height: 120%;
+    }
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 186%;
+    color: #5b574b;
+    @include media(1139) {
+      font-size: 1rem;
+    }
+    @include media(1023) {
+      font-size: 0.9rem;
+      line-height: 140%;
+    }
+  }
+}

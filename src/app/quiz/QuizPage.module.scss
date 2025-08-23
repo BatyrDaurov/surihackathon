@@ -1,0 +1,15 @@
+@import "./../../common/mixins.scss";
+
+.quiz {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    margin: 30px 0;
+    text-align: center;
+    @include media(1679) {
+      margin: 15px 0px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "./../../../common/mixins.scss";
+
+.header {
+  width: 100%;
+  height: var(--header-size);
+  position: fixed;
+  z-index: 15;
+  top: 15px;
+  padding-inline: 5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  @include media(1679) {
+    padding-inline: 2rem;
+  }
+  @include media(1139) {
+    top: 0;
+    background-color: rgba(243, 233, 190, 0.5);
+    backdrop-filter: blur(6px);
+    border: 1px solid #d0c38d;
+    padding-inline: 1rem;
+  }
+
+  &__logo {
+    display: block;
+    padding-bottom: 15px;
+    a {
+      position: relative;
+      display: block;
+      font-family: var(--font-gloock);
+      line-height: 115.5%;
+      font-size: 7.5rem;
+
+      color: var(--title-text-color);
+      @include media(1679) {
+        font-size: 5.45rem;
+      }
+      @include media(1139) {
+        font-size: 3.5rem;
+      }
+    }
+    @include media(1139) {
+      padding: 0;
+    }
+  }
+  &__nav {
+    @include media(1139) {
+      &.menu-active ul {
+        left: 0% !important;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      padding: 0 60px;
+      height: 118px;
+      background-color: rgba(243, 233, 190, 0.5);
+      border: 1px solid #d0c38d;
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      @include media(1679) {
+        gap: 2rem;
+        height: auto;
+        padding: 25px 30px;
+      }
+      @include media(1139) {
+        backdrop-filter: blur(10px);
+        background-color: rgba(243, 233, 190, 0.95);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        left: -120%;
+        z-index: 100;
+        border-radius: 0;
+        top: 0;
+        padding-top: 180px;
+        align-items: start;
+        flex-direction: column;
+        transition: 0.3s;
+        &.active {
+          left: 0% !important;
+        }
+      }
+    }
+    li {
+      a {
+        font-weight: 300;
+        font-size: 2.25rem;
+        line-height: 44px;
+        color: #383838;
+        transition: 0.2s;
+        &:hover {
+          color: #000;
+        }
+        @include media(1679) {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+  &__burger {
+    display: none;
+    width: min-content;
+    border: 1px solid #d0c38d;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(243, 233, 190, 0.5);
+    position: relative;
+    z-index: 101;
+    button {
+      @include burger;
+    }
+    @include media(1139) {
+      display: block;
+    }
+  }
+}
