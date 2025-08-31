@@ -17,7 +17,7 @@
   &__title {
     margin: 0;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     line-height: 186%;
 
     color: var(--title-text-color);
@@ -30,6 +30,7 @@
     }
     @include media(575) {
       font-size: 1.2rem;
+      margin-bottom: 0.5em;
     }
   }
   &__description {

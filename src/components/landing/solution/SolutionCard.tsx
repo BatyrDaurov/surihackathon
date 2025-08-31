@@ -5,7 +5,7 @@ import s from "./Solution.module.scss";
 
 type SolutionCardProps = {
   title: string;
-  description: string;
+  description: React.ReactNode;
 };
 
 export const SolutionCard = memo(
@@ -25,7 +25,7 @@ export const SolutionCard = memo(
         >
           {title}
         </motion.h4>
-        <motion.p
+        <motion.div
           initial="hidden"
           whileInView="visible"
           variants={animationsVariants("column", "bottom")}
@@ -37,7 +37,7 @@ export const SolutionCard = memo(
           className={s.solution_card__description}
         >
           {description}
-        </motion.p>
+        </motion.div>
       </div>
     </motion.div>
   )
